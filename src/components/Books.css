@@ -1,0 +1,37 @@
+/* Books.css */
+.books-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.books-list {
+    list-style: none;
+    padding: 0;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.book-item div {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.download-link {
+    text-decoration: none;
+    color: #007bff;
+}
