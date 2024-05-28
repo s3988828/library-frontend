@@ -1,0 +1,16 @@
+[Unit]
+Description=Gunicorn instance to serve library-frontend backend
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/library-frontend/library-backend
+Environment="PATH=/home/ubuntu/library-frontend/library-backend/venv/bin"
+ExecStart=/home/ubuntu/library-frontend/library-backend/venv/bin/gunicorn --workers 3 --bind unix:library_backend.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
+
+
+
