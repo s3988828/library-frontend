@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import io
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://3.27.30.178"}})
 app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'  # Ensure this is securely generated and consistent
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)
 bcrypt = Bcrypt(app)
