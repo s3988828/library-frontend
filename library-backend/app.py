@@ -97,7 +97,7 @@ def request_password_reset():
                        (user['id'], token, expiration_date))
         conn.commit()
 
-        reset_link = f"http://127.0.0.1:3000/reset-password?token={token}"
+        reset_link = f"http://3.27.30.178:5000'/reset-password?token={token}"
         msg = Message('Password Reset Request', recipients=[email])
         msg.body = f"Hello {user['username']},\n\nTo reset your password, click the following link: {reset_link}\n\nIf you did not request this, please ignore this email."
         mail.send(msg)
